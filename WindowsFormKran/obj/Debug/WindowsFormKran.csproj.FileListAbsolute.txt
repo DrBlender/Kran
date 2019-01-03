@@ -1,0 +1,10 @@
+C:\Users\GertzA\source\repos\WindowsFormKran\WindowsFormKran\bin\Debug\WindowsFormKran.exe.config
+C:\Users\GertzA\source\repos\WindowsFormKran\WindowsFormKran\bin\Debug\WindowsFormKran.exe
+C:\Users\GertzA\source\repos\WindowsFormKran\WindowsFormKran\bin\Debug\WindowsFormKran.pdb
+C:\Users\GertzA\source\repos\WindowsFormKran\WindowsFormKran\obj\Debug\WindowsFormKran.csprojAssemblyReference.cache
+C:\Users\GertzA\source\repos\WindowsFormKran\WindowsFormKran\obj\Debug\WindowsFormKran.Form1.resources
+C:\Users\GertzA\source\repos\WindowsFormKran\WindowsFormKran\obj\Debug\WindowsFormKran.Properties.Resources.resources
+C:\Users\GertzA\source\repos\WindowsFormKran\WindowsFormKran\obj\Debug\WindowsFormKran.csproj.GenerateResource.cache
+C:\Users\GertzA\source\repos\WindowsFormKran\WindowsFormKran\obj\Debug\WindowsFormKran.csproj.CoreCompileInputs.cache
+C:\Users\GertzA\source\repos\WindowsFormKran\WindowsFormKran\obj\Debug\WindowsFormKran.exe
+C:\Users\GertzA\source\repos\WindowsFormKran\WindowsFormKran\obj\Debug\WindowsFormKran.pdb
