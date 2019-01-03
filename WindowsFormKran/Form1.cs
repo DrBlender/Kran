@@ -271,14 +271,14 @@ namespace WindowsFormKran
                 }
             }
             int SizeAus = pnlAusleger.Size.Width;
-            if (SizeAus == 70 && pnlFundament.Location.X < 420 && pnlHaken.Location.X < 550)
-            {
-                lblAusgabe.Visible = false;
-                pnlMast.Location = new Point(pnlMast.Location.X + zahl, pnlMast.Location.Y);
-                pnlHaken.Location = new Point(pnlHaken.Location.X + zahl, pnlHaken.Location.Y);
-                pnlFundament.Location = new Point(pnlFundament.Location.X + zahl, pnlFundament.Location.Y);
-                pnlAusleger.Location = new Point(pnlAusleger.Location.X + zahl, pnlAusleger.Location.Y);
-            }
+            //if (SizeAus == 70 && ((pnlFundament.Location.X < 420 && pnlHaken.Location.X < 391)))
+            //{
+            //    lblAusgabe.Visible = false;
+            //    pnlMast.Location = new Point(pnlMast.Location.X + zahl, pnlMast.Location.Y);
+            //    pnlHaken.Location = new Point(pnlHaken.Location.X + zahl, pnlHaken.Location.Y);
+            //    pnlFundament.Location = new Point(pnlFundament.Location.X + zahl, pnlFundament.Location.Y);
+            //    pnlAusleger.Location = new Point(pnlAusleger.Location.X + zahl, pnlAusleger.Location.Y);
+            //}
             if (SizeAus > 70)
             {
                 lblAusgabe.Visible = true;
@@ -288,6 +288,16 @@ namespace WindowsFormKran
             {
                 lblAusgabe.Visible = true;
                 lblAusgabe.Text = "Bitte nach links!";
+            }
+
+            if (SizeAus == 70 && (((pnlHaken.Location.X > 5 && pnlHaken.Location.X < 391) && (pnlHaken.Location.Y > 5 && pnlHaken.Location.Y < 420)) || 
+               ((pnlHaken.Location.X >= 5 && pnlHaken.Location.X < 464) && (pnlHaken.Location.Y > 225 && pnlHaken.Location.Y < 420))))
+            {
+                lblAusgabe.Visible = false;
+                pnlMast.Location = new Point(pnlMast.Location.X + zahl, pnlMast.Location.Y);
+                pnlHaken.Location = new Point(pnlHaken.Location.X + zahl, pnlHaken.Location.Y);
+                pnlFundament.Location = new Point(pnlFundament.Location.X + zahl, pnlFundament.Location.Y);
+                pnlAusleger.Location = new Point(pnlAusleger.Location.X + zahl, pnlAusleger.Location.Y);
             }
         }
 
@@ -332,7 +342,5 @@ namespace WindowsFormKran
         {
 
         }
-
-
     }
 }

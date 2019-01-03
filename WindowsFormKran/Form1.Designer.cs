@@ -48,6 +48,9 @@
             this.btAN = new System.Windows.Forms.Button();
             this.btOFF = new System.Windows.Forms.Button();
             this.txtEingabe = new System.Windows.Forms.TextBox();
+            this.pnlBox = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -131,7 +134,7 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(597, 156);
+            this.button5.Location = new System.Drawing.Point(13, 163);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(191, 30);
             this.button5.TabIndex = 8;
@@ -142,7 +145,7 @@
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(597, 192);
+            this.button6.Location = new System.Drawing.Point(13, 199);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(191, 30);
             this.button6.TabIndex = 9;
@@ -190,7 +193,9 @@
             this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.Controls.Add(this.txtEingabe);
             this.panel1.Controls.Add(this.btOFF);
+            this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.btAN);
+            this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.lblAusgabe);
             this.panel1.Controls.Add(this.btRechts);
             this.panel1.Controls.Add(this.btLinks);
@@ -263,15 +268,38 @@
             this.txtEingabe.TabIndex = 14;
             this.txtEingabe.TextChanged += new System.EventHandler(this.txtEingabe_TextChanged);
             // 
+            // pnlBox
+            // 
+            this.pnlBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.pnlBox.Location = new System.Drawing.Point(12, 424);
+            this.pnlBox.Name = "pnlBox";
+            this.pnlBox.Size = new System.Drawing.Size(25, 25);
+            this.pnlBox.TabIndex = 14;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.panel2.Location = new System.Drawing.Point(481, 424);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(81, 24);
+            this.panel2.TabIndex = 15;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panel3.Location = new System.Drawing.Point(410, -4);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(173, 229);
+            this.panel3.TabIndex = 16;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 451);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -281,6 +309,8 @@
             this.Controls.Add(this.pnlMast);
             this.Controls.Add(this.pnlFundament);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlBox);
+            this.Controls.Add(this.panel2);
             this.Name = "Form1";
             this.Text = "Kran";
             this.panel1.ResumeLayout(false);
@@ -311,6 +341,9 @@
         private System.Windows.Forms.Button btOFF;
         private System.Windows.Forms.Button btAN;
         private System.Windows.Forms.TextBox txtEingabe;
+        private System.Windows.Forms.Panel pnlBox;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
     }
 }
 
