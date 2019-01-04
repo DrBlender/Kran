@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnlFundament = new System.Windows.Forms.Panel();
             this.pnlMast = new System.Windows.Forms.Panel();
             this.pnlAusleger = new System.Windows.Forms.Panel();
@@ -42,16 +43,32 @@
             this.button8 = new System.Windows.Forms.Button();
             this.btExit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btLinks = new System.Windows.Forms.Button();
-            this.btRechts = new System.Windows.Forms.Button();
-            this.lblAusgabe = new System.Windows.Forms.Label();
-            this.btAN = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.btOFF = new System.Windows.Forms.Button();
-            this.txtEingabe = new System.Windows.Forms.TextBox();
+            this.btAN = new System.Windows.Forms.Button();
+            this.lblAusgabe = new System.Windows.Forms.Label();
+            this.btRechts = new System.Windows.Forms.Button();
+            this.btLinks = new System.Windows.Forms.Button();
             this.pnlBox = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timerHE = new System.Windows.Forms.Timer(this.components);
+            this.timerAA = new System.Windows.Forms.Timer(this.components);
+            this.timerAE = new System.Windows.Forms.Timer(this.components);
+            this.timerKA = new System.Windows.Forms.Timer(this.components);
+            this.timerKE = new System.Windows.Forms.Timer(this.components);
+            this.timerR = new System.Windows.Forms.Timer(this.components);
+            this.timerL = new System.Windows.Forms.Timer(this.components);
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btGreif = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.pnlStop = new System.Windows.Forms.Panel();
+            this.lblHaken = new System.Windows.Forms.Label();
+            this.lblO = new System.Windows.Forms.Label();
+            this.timerBox = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
+            this.pnlBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlFundament
@@ -180,7 +197,7 @@
             this.btExit.BackColor = System.Drawing.Color.Red;
             this.btExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btExit.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btExit.Location = new System.Drawing.Point(61, 400);
+            this.btExit.Location = new System.Drawing.Point(61, 461);
             this.btExit.Name = "btExit";
             this.btExit.Size = new System.Drawing.Size(92, 30);
             this.btExit.TabIndex = 12;
@@ -191,7 +208,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Silver;
-            this.panel1.Controls.Add(this.txtEingabe);
+            this.panel1.Controls.Add(this.button10);
+            this.panel1.Controls.Add(this.btGreif);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btOFF);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.btAN);
@@ -202,30 +221,41 @@
             this.panel1.Controls.Add(this.btExit);
             this.panel1.Location = new System.Drawing.Point(584, -4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(213, 453);
+            this.panel1.Size = new System.Drawing.Size(213, 501);
             this.panel1.TabIndex = 13;
             // 
-            // btLinks
+            // button1
             // 
-            this.btLinks.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btLinks.Location = new System.Drawing.Point(13, 304);
-            this.btLinks.Name = "btLinks";
-            this.btLinks.Size = new System.Drawing.Size(60, 60);
-            this.btLinks.TabIndex = 14;
-            this.btLinks.Text = "←";
-            this.btLinks.UseVisualStyleBackColor = true;
-            this.btLinks.Click += new System.EventHandler(this.btLinks_Click);
+            this.button1.BackColor = System.Drawing.Color.Gold;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(78, 304);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(60, 60);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "HALT";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.button1.Enter += new System.EventHandler(this.button1_Click);
             // 
-            // btRechts
+            // btOFF
             // 
-            this.btRechts.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btRechts.Location = new System.Drawing.Point(144, 304);
-            this.btRechts.Name = "btRechts";
-            this.btRechts.Size = new System.Drawing.Size(60, 60);
-            this.btRechts.TabIndex = 15;
-            this.btRechts.Text = "→";
-            this.btRechts.UseVisualStyleBackColor = true;
-            this.btRechts.Click += new System.EventHandler(this.btRechts_Click);
+            this.btOFF.BackColor = System.Drawing.Color.Red;
+            this.btOFF.Location = new System.Drawing.Point(154, 449);
+            this.btOFF.Name = "btOFF";
+            this.btOFF.Size = new System.Drawing.Size(50, 42);
+            this.btOFF.TabIndex = 18;
+            this.btOFF.UseVisualStyleBackColor = false;
+            this.btOFF.Click += new System.EventHandler(this.btOFF_Click);
+            // 
+            // btAN
+            // 
+            this.btAN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btAN.Location = new System.Drawing.Point(5, 449);
+            this.btAN.Name = "btAN";
+            this.btAN.Size = new System.Drawing.Size(50, 42);
+            this.btAN.TabIndex = 17;
+            this.btAN.UseVisualStyleBackColor = false;
+            this.btAN.Click += new System.EventHandler(this.btAN_Click);
             // 
             // lblAusgabe
             // 
@@ -239,38 +269,32 @@
             this.lblAusgabe.Text = "Ausleger einfahren!";
             this.lblAusgabe.Visible = false;
             // 
-            // btAN
+            // btRechts
             // 
-            this.btAN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btAN.Location = new System.Drawing.Point(6, 400);
-            this.btAN.Name = "btAN";
-            this.btAN.Size = new System.Drawing.Size(50, 42);
-            this.btAN.TabIndex = 17;
-            this.btAN.UseVisualStyleBackColor = false;
-            this.btAN.Click += new System.EventHandler(this.btAN_Click);
+            this.btRechts.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btRechts.Location = new System.Drawing.Point(144, 304);
+            this.btRechts.Name = "btRechts";
+            this.btRechts.Size = new System.Drawing.Size(60, 60);
+            this.btRechts.TabIndex = 15;
+            this.btRechts.Text = "→";
+            this.btRechts.UseVisualStyleBackColor = true;
+            this.btRechts.Click += new System.EventHandler(this.btRechts_Click);
             // 
-            // btOFF
+            // btLinks
             // 
-            this.btOFF.BackColor = System.Drawing.Color.Red;
-            this.btOFF.Location = new System.Drawing.Point(155, 400);
-            this.btOFF.Name = "btOFF";
-            this.btOFF.Size = new System.Drawing.Size(50, 42);
-            this.btOFF.TabIndex = 18;
-            this.btOFF.UseVisualStyleBackColor = false;
-            this.btOFF.Click += new System.EventHandler(this.btOFF_Click);
-            // 
-            // txtEingabe
-            // 
-            this.txtEingabe.Font = new System.Drawing.Font("Microsoft Sans Serif", 33.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEingabe.Location = new System.Drawing.Point(79, 305);
-            this.txtEingabe.Name = "txtEingabe";
-            this.txtEingabe.Size = new System.Drawing.Size(60, 58);
-            this.txtEingabe.TabIndex = 14;
-            this.txtEingabe.TextChanged += new System.EventHandler(this.txtEingabe_TextChanged);
+            this.btLinks.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btLinks.Location = new System.Drawing.Point(13, 304);
+            this.btLinks.Name = "btLinks";
+            this.btLinks.Size = new System.Drawing.Size(60, 60);
+            this.btLinks.TabIndex = 14;
+            this.btLinks.Text = "←";
+            this.btLinks.UseVisualStyleBackColor = true;
+            this.btLinks.Click += new System.EventHandler(this.btLinks_Click);
             // 
             // pnlBox
             // 
             this.pnlBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.pnlBox.Controls.Add(this.pnlStop);
             this.pnlBox.Location = new System.Drawing.Point(12, 424);
             this.pnlBox.Name = "pnlBox";
             this.pnlBox.Size = new System.Drawing.Size(25, 25);
@@ -292,11 +316,112 @@
             this.panel3.Size = new System.Drawing.Size(173, 229);
             this.panel3.TabIndex = 16;
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 35;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // timerHE
+            // 
+            this.timerHE.Interval = 35;
+            this.timerHE.Tick += new System.EventHandler(this.timerHE_Tick);
+            // 
+            // timerAA
+            // 
+            this.timerAA.Interval = 35;
+            this.timerAA.Tick += new System.EventHandler(this.timerAA_Tick);
+            // 
+            // timerAE
+            // 
+            this.timerAE.Interval = 35;
+            this.timerAE.Tick += new System.EventHandler(this.timerAE_Tick);
+            // 
+            // timerKA
+            // 
+            this.timerKA.Interval = 35;
+            this.timerKA.Tick += new System.EventHandler(this.timerKA_Tick);
+            // 
+            // timerKE
+            // 
+            this.timerKE.Interval = 35;
+            this.timerKE.Tick += new System.EventHandler(this.timerKE_Tick);
+            // 
+            // timerR
+            // 
+            this.timerR.Interval = 35;
+            this.timerR.Tick += new System.EventHandler(this.timerR_Tick);
+            // 
+            // timerL
+            // 
+            this.timerL.Interval = 35;
+            this.timerL.Tick += new System.EventHandler(this.timerL_Tick);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel4.Location = new System.Drawing.Point(1, 449);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(582, 54);
+            this.panel4.TabIndex = 17;
+            // 
+            // btGreif
+            // 
+            this.btGreif.BackColor = System.Drawing.Color.Green;
+            this.btGreif.Location = new System.Drawing.Point(6, 398);
+            this.btGreif.Name = "btGreif";
+            this.btGreif.Size = new System.Drawing.Size(90, 42);
+            this.btGreif.TabIndex = 20;
+            this.btGreif.UseVisualStyleBackColor = false;
+            this.btGreif.Click += new System.EventHandler(this.btGreif_Click);
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button10.Location = new System.Drawing.Point(114, 398);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(90, 42);
+            this.button10.TabIndex = 21;
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // pnlStop
+            // 
+            this.pnlStop.Location = new System.Drawing.Point(3, -1);
+            this.pnlStop.Name = "pnlStop";
+            this.pnlStop.Size = new System.Drawing.Size(25, 1);
+            this.pnlStop.TabIndex = 18;
+            // 
+            // lblHaken
+            // 
+            this.lblHaken.AutoSize = true;
+            this.lblHaken.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblHaken.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHaken.Location = new System.Drawing.Point(334, 176);
+            this.lblHaken.Name = "lblHaken";
+            this.lblHaken.Size = new System.Drawing.Size(25, 25);
+            this.lblHaken.TabIndex = 22;
+            this.lblHaken.Text = "¿";
+            // 
+            // lblO
+            // 
+            this.lblO.AutoSize = true;
+            this.lblO.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblO.Location = new System.Drawing.Point(10, 411);
+            this.lblO.Name = "lblO";
+            this.lblO.Size = new System.Drawing.Size(29, 25);
+            this.lblO.TabIndex = 23;
+            this.lblO.Text = "O";
+            // 
+            // timerBox
+            // 
+            this.timerBox.Interval = 10;
+            this.timerBox.Tick += new System.EventHandler(this.timerBox_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 451);
+            this.ClientSize = new System.Drawing.Size(800, 499);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
@@ -311,11 +436,16 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlBox);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.lblHaken);
+            this.Controls.Add(this.lblO);
             this.Name = "Form1";
             this.Text = "Kran";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.pnlBox.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -340,10 +470,25 @@
         private System.Windows.Forms.Button btLinks;
         private System.Windows.Forms.Button btOFF;
         private System.Windows.Forms.Button btAN;
-        private System.Windows.Forms.TextBox txtEingabe;
         private System.Windows.Forms.Panel pnlBox;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Timer timerHE;
+        private System.Windows.Forms.Timer timerAA;
+        private System.Windows.Forms.Timer timerAE;
+        private System.Windows.Forms.Timer timerKA;
+        private System.Windows.Forms.Timer timerKE;
+        private System.Windows.Forms.Timer timerR;
+        private System.Windows.Forms.Timer timerL;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btGreif;
+        private System.Windows.Forms.Panel pnlStop;
+        private System.Windows.Forms.Label lblHaken;
+        private System.Windows.Forms.Label lblO;
+        private System.Windows.Forms.Timer timerBox;
     }
 }
 
